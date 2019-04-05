@@ -1,0 +1,27 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.main{
+	padding: 10px;
+	/* display: flex; */
+	/* justify-content: center; */
+	/* align-items: center; */
+}
+
+.form{
+	display: block;
+	margin: 10px 0 10px 0;
+}
+
+.ul{
+	list-style: inside;
+	margin-left: 10px;
+}
+
+/* .form input[type], select, textarea{ */
+/* 	display: block; */
+/* 	font-size: 1em; */
+/* 	margin: 10px; */
+/* } */
