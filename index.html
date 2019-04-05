@@ -9,23 +9,25 @@
 		<title>Shopping List</title>
 	</head>
 	<body>
-		<header>
+		<header class="header">
+			<h1>Shopping List</h1>
 		</header>
 		<main class="main">
-			<h1>Shopping List</h1>
 			<form class="form" action="">
-					<input type="text" class="input" size="30" placeholder="Tomatos" autofocus />
-					<input type="submit" value="Add-in" />
+				<input type="text" class="input" size="30" placeholder="Tomatos" autofocus /></input>
+				<input type="submit" value="Add-in" name="add" />
 			</form>
 			<ul class="ul">
 				<li>Milk</li>
 				<li>Eggs</li>
-				<li>Banana</li>
 			</ul>
 		</main>
-		<footer>
+		<footer class="footer">
+			<div>
+				<input type="submit" value="DarkMode" name="darkmode" />
+			</div>
 		</footer>
 
-		<script src=""></script>
+		<script src="/js/todo.js"></script>
 	</body>
 </html>
