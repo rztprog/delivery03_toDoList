@@ -2,7 +2,7 @@
 
 ## NEXT FEATURES
 
--Adding item
--Delete item
--Darkmode
+* Adding item
+* Delete item
+* Darkmode
 
