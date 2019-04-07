@@ -3,27 +3,6 @@
 /* 	padding: 0; */
 /* } */
 
-/* .header{ */
-/* 	display: flex; */
-/* 	justify-content: center; */
-/* 	align-items: center; */
-/* } */
-
-/* .main{ */
-/* 	padding: 10px; */
-/* 	display: flex; */
-/* 	justify-content: center; */
-/* 	align-items: center; */
-/* } */
-
-/* .form{ */
-/* 	margin: 10px 0 10px 0; */
-/* } */
-
-/* .ul{ */
-/* 	list-style: inside; */
-/* 	margin-left: 10px; */
-/* } */
 .data,
 .addButton{
 	height: 30px;
@@ -40,10 +19,5 @@
 	background-color: #fff;
 	color: #000;
 	width: 100px;
-}
-
-/* .footer{ */
-/* 	display: flex; */
-/* 	justify-content: center; */
 }
 
