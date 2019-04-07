@@ -11,8 +11,11 @@ let i = 0;
 let dark = document.getElementsByClassName("darkmode")[0];
 document.body.style.backgroundColor = "#222222";
 document.body.style.color = "#fff";
+document.getElementsByClassName("data")[0].style.backgroundColor = "rgba(170, 170, 170, 200)";
+document.getElementsByClassName("data")[0].style.color = "#fff";
+document.getElementsByClassName("data")[0].style.textShadow = "1px 1px #000";
+document.getElementsByClassName("data")[0].style.borderBottom = "solid 1px #fff";
 dark.onclick = darkmode;
-
 
 
 //// FUNCTIONS ////
@@ -37,6 +40,7 @@ function add(){
 	for(let li of lis){
 		if( newLi.textContent == li.innerHTML ){
 			return alert("This items is already-in");
+			// return setTimeout( () => li.backgroundColor = "red", 1000);
 		}
 	}
 
@@ -50,6 +54,7 @@ function darkmode(){
 		document.getElementsByClassName("data")[0].style.backgroundColor = "rgba(170, 170, 170, 200)";
 		document.getElementsByClassName("data")[0].style.color = "#fff";
 		document.getElementsByClassName("data")[0].style.textShadow = "1px 1px #000";
+		document.getElementsByClassName("data")[0].style.borderBottom = "solid 1px #fff";
 		dark.value = "Darkmode [ON]";
 		i--;
 	}else{		// LIGHT
@@ -58,8 +63,16 @@ function darkmode(){
 		document.getElementsByClassName("data")[0].style.backgroundColor = "rgba(240, 240, 240, 200)";
 		document.getElementsByClassName("data")[0].style.color = "#000";
 		document.getElementsByClassName("data")[0].style.textShadow = "1px 1px #fff";
+		document.getElementsByClassName("data")[0].style.borderBottom = "solid 1px #000";
 		dark.value = "Darkmode [OFF]";
 		i++;
 	}
 };
 
+dataKey.onkeypress = function(event) {
+	if(event.keyCode == 13){
+		event.preventDefault();
+		addButton.click();
+	}
+	return;
+}
