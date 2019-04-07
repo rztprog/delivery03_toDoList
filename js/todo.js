@@ -1,26 +1,25 @@
 'use strict';
 
-let i = 0;
 
 // Target the UL with his class
 let ul = document.body.getElementsByClassName("ul")[0];
-
-
-// Function for create a new li
 let newLi = document.createElement("li"); 
-
-
-// Target the input with his class
-let input = document.querySelector("input");
-
-
-// Add the newLi with the text "Cheese"
+let addButton = document.getElementsByClassName("addButton")[0];
+// newLi.textContent = "Cheese";
 newLi.innerHTML = "Cheese";
+addButton.onclick = add;
+
+// Darkmode
+let i = 0;
+let dark = document.getElementsByClassName("darkmode")[0];
+dark.onclick = darkmode;
 
 
+
+//// FUNCTIONS ////
 function add(){
 	ul.appendChild(newLi);
-}
+};
 
 
 function darkmode(){
@@ -33,5 +32,5 @@ function darkmode(){
 		document.body.style.color = "#000";	
 		i++;
 	}
-}
+};
 
