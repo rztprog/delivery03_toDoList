@@ -5,7 +5,7 @@
 ## FEATURES
 
 * Adding item on button
-* No repeating 
+* No repeating (red input) 
 * Empty field
 * Darkmode live
 * Uppercase each first letter
