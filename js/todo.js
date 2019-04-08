@@ -1,7 +1,9 @@
 'use strict';
 
-// Target the UL with his class
-let ul = document.body.getElementsByClassName("ul")[0];
+////////// VARIABLES //////////
+
+// Target the UL
+let ul = document.getElementsByClassName("ul")[0];
 let addButton = document.getElementsByClassName("addButton")[0];
 addButton.onclick = add;
 
@@ -9,22 +11,18 @@ addButton.onclick = add;
 // Darkmode
 let i = 0;
 let dark = document.getElementsByClassName("darkmode")[0];
-document.body.style.backgroundColor = "#222222";
-document.body.style.color = "#fff";
-document.getElementsByClassName("data")[0].style.backgroundColor = "rgba(170, 170, 170, 200)";
-document.getElementsByClassName("data")[0].style.color = "#fff";
-document.getElementsByClassName("data")[0].style.textShadow = "1px 1px #000";
-document.getElementsByClassName("data")[0].style.borderBottom = "solid 1px #fff";
+let datastyle = document.getElementsByClassName("data")[0].style;
+let body = document.getElementsByClassName("body")[0].style;
 dark.onclick = darkmode;
 
 
-//// FUNCTIONS ////
+////////// FUNCTIONS //////////
 function add(){
 
 	let newLi = document.createElement("li"); 
 	let lis = document.getElementsByTagName("li");
 	let data = document.body.getElementsByClassName("data")[0].value;
-	if ( data == "" || data == undefined){
+	if (data == "" || data == undefined){
 		return alert("DONT PUSH this button when he's empty, everything could EXPLODE !");
 	}
 	
@@ -37,10 +35,10 @@ function add(){
 	data = upper(data);
 	newLi.textContent = data;
 	
-	for(let li of lis){
+	for(let li of lis){ 
 		if( newLi.textContent == li.innerHTML ){
-			return alert("This items is already-in");
-			// return setTimeout( () => li.backgroundColor = "red", 1000);
+			datastyle.backgroundColor = "rgb(255, 55, 55)";
+			return setTimeout( () => datastyle.backgroundColor = "white", 400);
 		}
 	}
 
@@ -49,30 +47,32 @@ function add(){
 
 function darkmode(){
 	if(i == 1){ 	// DARK
-		document.body.style.backgroundColor = "#222222";
-		document.body.style.color = "#fff";
-		document.getElementsByClassName("data")[0].style.backgroundColor = "rgba(170, 170, 170, 200)";
-		document.getElementsByClassName("data")[0].style.color = "#fff";
-		document.getElementsByClassName("data")[0].style.textShadow = "1px 1px #000";
-		document.getElementsByClassName("data")[0].style.borderBottom = "solid 1px #fff";
-		dark.value = "Darkmode [ON]";
+		body.backgroundColor = "#222222";
+		body.color = "#fff";
+		datastyle.backgroundColor = "rgba(170, 170, 170, 0.9)";
+		datastyle.color = "#fff";
+		datastyle.textShadow = "1px 1px #000";
+		datastyle.borderBottom = "solid 1px #fff";
+		dark.value = "Darkmode [OFF]";
 		i--;
 	}else{		// LIGHT
-		document.body.style.backgroundColor = "#fff";
-		document.body.style.color = "#000";	
-		document.getElementsByClassName("data")[0].style.backgroundColor = "rgba(240, 240, 240, 200)";
-		document.getElementsByClassName("data")[0].style.color = "#000";
-		document.getElementsByClassName("data")[0].style.textShadow = "1px 1px #fff";
-		document.getElementsByClassName("data")[0].style.borderBottom = "solid 1px #000";
-		dark.value = "Darkmode [OFF]";
+		body.backgroundColor = "#fff";
+		body.color = "#000";	
+		datastyle.backgroundColor = "rgba(230, 230, 230, 0.9)";
+		datastyle.color = "#000";
+		datastyle.textShadow = "1px 1px #fff";
+		datastyle.borderBottom = "solid 1px #000";
+		dark.value = "Darkmode [ON]";
 		i++;
 	}
 };
 
-dataKey.onkeypress = function(event) {
-	if(event.keyCode == 13){
-		event.preventDefault();
-		addButton.click();
-	}
-	return;
-}
+
+//////// EVENT ////////
+// dataKey.onkeypress = function(event) {
+// 	if(event.keyCode == 13){
+// 		event.preventDefault();
+// 		addButton.click();
+// 	}
+// 	return;
+// }
