@@ -38,7 +38,8 @@ function add(){
 	for(let li of lis){ 
 		if( newLi.textContent == li.innerHTML ){
 			datastyle.backgroundColor = "rgb(255, 55, 55)";
-			return setTimeout( () => datastyle.backgroundColor = "white", 400);
+			//li.style.backgroundColor = "rgb(255, 55, 55)"; 
+			return setTimeout( () => datastyle.backgroundColor = "rgba(170, 170, 170, 0.9)", 500);
 		}
 	}
 
