@@ -53,6 +53,8 @@ function add(){
 		// newLi.style.color = "rgba(0, 0, 0, 0.6)";
 	}
 
+      	// newLi.insertAdjacentHTML("afterbegin", '<button class="remove">X</button>');	
+	// newLi.firstChild.onclick = () => newLi.remove();
 	ul.appendChild(newLi);
 };
 
