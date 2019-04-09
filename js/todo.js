@@ -11,6 +11,7 @@ addButton.onclick = add;
 
 // Darkmode
 let i = 0;
+let y = 0;
 let dark = document.getElementsByClassName("darkmode")[0];
 let datastyle = document.getElementsByClassName("data")[0].style;
 let body = document.getElementsByClassName("body")[0].style;
@@ -49,7 +50,13 @@ function add(){
 	}
 
 	newLi.onclick = function(){
-		newLi.style.textDecoration = "line-through";
+		if(y == 0){
+			newLi.style.textDecoration = "line-through";
+			y++;
+		}else{
+			newLi.style.textDecoration = "none";
+			y--;
+		}
 		// newLi.style.color = "rgba(0, 0, 0, 0.6)";
 	}
 
