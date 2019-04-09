@@ -6,10 +6,27 @@
 /* li{ */
 /* 	width: 300px; */
 /* } */
+.form,
+.ulwrapper,
+.footer,
+.header{
+	display: flex;
+	justify-content: center;
+}
+
+.ul > li{
+	font-size: 2em;
+	list-style-type: none;
+}
+
+.title{
+	font-size: 3em; 
+}
 
 .data,
 .addButton{
 	height: 30px;
+	margin-left: 10px;
 }
 
 .data{
