@@ -54,3 +54,8 @@
 .remove{
 	margin-right: 5px;
 }
+
+.header{
+	background-color: #555;
+	margin-bottom: 10px;
+}

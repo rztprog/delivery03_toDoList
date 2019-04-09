@@ -15,6 +15,7 @@ let y = 0;
 let dark = document.getElementsByClassName("darkmode")[0];
 let datastyle = document.getElementsByClassName("data")[0].style;
 let body = document.getElementsByClassName("body")[0].style;
+let header = document.getElementsByClassName("header")[0].style;
 dark.onclick = darkmode;
 
 
@@ -78,6 +79,7 @@ function darkmode(){
 		datastyle.color = "#fff";
 		datastyle.textShadow = "1px 1px #000";
 		datastyle.borderBottom = "solid 1px #fff";
+		header.backgroundColor = "#555"
 		dark.value = "Darkmode [OFF]";
 		i--;
 	}else{		// LIGHT
@@ -87,6 +89,7 @@ function darkmode(){
 		datastyle.color = "#000";
 		datastyle.textShadow = "1px 1px #fff";
 		datastyle.borderBottom = "solid 1px #000";
+		header.backgroundColor = "#DDD"
 		dark.value = "Darkmode [ON]";
 		i++;
 	}
