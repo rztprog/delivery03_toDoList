@@ -4,17 +4,17 @@
 
 ## FEATURES
 
-* Adding item on button
+* Adding item with button
 * No repeating (red input) 
 * Empty field
 * Darkmode live
 * Uppercase each first letter
+* Crossed/Checked item
 
 ## NEXT FEATURES
 
-* Add button on keyPress Enter
-* Delete item
-* Crossed/Checked item
+* Add item with Enter
+* Delete item 
 * Better style (css)
 
 ## SPECIAL THANKS
